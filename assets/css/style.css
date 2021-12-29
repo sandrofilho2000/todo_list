@@ -1,0 +1,367 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,600&family=Poppins:ital,wght@0,200;0,400;0,500;0,600;1,100;1,200;1,300;1,700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  resize: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+}
+
+body, html {
+  background-color: #FEEFD7;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+::-webkit-input-placeholder {
+  font-style: italic;
+  font-size: 16px;
+  color: #ccc;
+}
+
+:-ms-input-placeholder {
+  font-style: italic;
+  font-size: 16px;
+  color: #ccc;
+}
+
+::-ms-input-placeholder {
+  font-style: italic;
+  font-size: 16px;
+  color: #ccc;
+}
+
+::placeholder {
+  font-style: italic;
+  font-size: 16px;
+  color: #ccc;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-thumb {
+  background: #006A6A;
+  width: 5px;
+  border-radius: 5px;
+}
+
+textarea::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+textarea {
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
+
+.listContainer {
+  width: 90%;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  height: auto;
+  background-color: whitesmoke;
+  padding-bottom: 65px;
+}
+
+.listContainer .header {
+  width: 100%;
+  height: 60px;
+  padding: 0 15px;
+  background-color: #006A6A;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.listContainer .header h1 {
+  color: white;
+}
+
+.listContainer .header img {
+  width: 110px;
+}
+
+.listContainer .addTask {
+  width: 100%;
+  height: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0 15px;
+  margin-top: 10px;
+}
+
+.listContainer .addTask form {
+  margin: 0 auto;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.listContainer .addTask form input[type=text] {
+  width: 90%;
+  outline: none;
+  border: none;
+  padding-left: 25px;
+  font-family: "Poppins";
+  color: #7b7b7b;
+}
+
+.listContainer .addTask form input[type=text]:focus {
+  outline: 1px solid #36afd1;
+}
+
+.listContainer .addTask form input[type=submit] {
+  background-color: #36afd1;
+  color: white;
+  display: block;
+  outline: none;
+  border: none;
+  width: 130px;
+  font-weight: bold;
+  font-size: 15px;
+  height: 38px;
+  cursor: pointer;
+}
+
+.listContainer .addTask form input[type=submit]:hover {
+  opacity: 0.8;
+}
+
+.listContainer .tasksList {
+  width: 100%;
+  height: auto;
+  max-height: 350px;
+  overflow: auto;
+  padding: 0 15px;
+}
+
+.listContainer .tasksList h3 {
+  font-weight: 800;
+  color: #006A6A;
+}
+
+.listContainer .tasksList .tasksContainer {
+  width: 100%;
+  height: auto;
+}
+
+.listContainer .tasksList .tasksContainer .taskSingle {
+  width: 100%;
+  min-height: 50px;
+  height: auto;
+  border-bottom: 1px solid #c8c8c8;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 5px 0;
+}
+
+.listContainer .tasksList .tasksContainer .taskSingle:last-of-type {
+  border-bottom: none;
+}
+
+.listContainer .tasksList .tasksContainer .taskSingle form {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+.listContainer .tasksList .tasksContainer .taskSingle form .checkBox {
+  height: 24px;
+  width: 24px;
+  border: 3px solid #7b7b7b;
+  border-radius: 3px;
+  margin-right: 2%;
+}
+
+.listContainer .tasksList .tasksContainer .taskSingle form .checkBox input[type=checkbox] {
+  accent-color: #7b7b7b;
+  height: 20px;
+  width: 20px;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateY(-50%) translateX(-50%);
+          transform: translateY(-50%) translateX(-50%);
+  border: none;
+  border-radius: 0px;
+  position: relative;
+  background-color: #7b7b7b;
+  z-index: 1;
+}
+
+.listContainer .tasksList .tasksContainer .taskSingle form .checkBox input[type=checkbox]:hover {
+  opacity: 1;
+  background-color: initial;
+}
+
+.listContainer .tasksList .tasksContainer .taskSingle form p, .listContainer .tasksList .tasksContainer .taskSingle form textarea {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: #7b7b7b;
+  font-size: 15px;
+  word-wrap: initial;
+  display: block;
+  width: 75%;
+  /* display: flex; */
+  -ms-grid-column-align: start;
+      justify-self: start;
+  word-break: break-all;
+  white-space: normal;
+  position: relative;
+  font-family: 'Poppins', sans-serif;
+}
+
+.listContainer .tasksList .tasksContainer .taskSingle form textarea {
+  display: none;
+  overflow: auto;
+}
+
+.listContainer .tasksList .tasksContainer .taskSingle form .action {
+  height: 30px;
+  width: 75px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  line-height: 30px;
+  position: absolute;
+  right: 0;
+}
+
+.listContainer .tasksList .tasksContainer .taskSingle form .action i {
+  font-size: 30px;
+  color: #7b7b7b;
+  cursor: pointer;
+}
+
+.listContainer .tasksList .tasksContainer .taskSingle form.taskEdit p {
+  display: none !important;
+}
+
+.listContainer .tasksList .tasksContainer .taskSingle form.taskEdit textarea {
+  display: block !important;
+}
+
+.listContainer .tasksList .tasksContainer .taskSingle form.taskEdit textarea:focus {
+  border-bottom: 1px solid #7b7b7b;
+}
+
+.listContainer .done {
+  margin-top: 40px;
+}
+
+.listContainer .done .tasksContainer .taskSingle form .action {
+  -webkit-box-pack: right;
+      -ms-flex-pack: right;
+          justify-content: right;
+}
+
+@media screen and (max-width: 541px) {
+  div.listContainer {
+    width: 100%;
+    -webkit-transform: translateY(-50%) scale(0.8);
+            transform: translateY(-50%) scale(0.8);
+  }
+  .listContainer .tasksList .tasksContainer .taskSingle form p, .listContainer .tasksList .tasksContainer .taskSingle form textarea {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 417px) {
+  .listContainer .addTask form input[type=text] {
+    padding-left: 5px;
+  }
+  .listContainer .tasksList .tasksContainer .taskSingle form p, .listContainer .tasksList .tasksContainer .taskSingle form textarea {
+    font-size: 12px;
+  }
+  ::-webkit-input-placeholder {
+    font-style: italic;
+    font-size: 12px;
+    color: #ccc;
+  }
+  :-ms-input-placeholder {
+    font-style: italic;
+    font-size: 12px;
+    color: #ccc;
+  }
+  ::-ms-input-placeholder {
+    font-style: italic;
+    font-size: 12px;
+    color: #ccc;
+  }
+  ::placeholder {
+    font-style: italic;
+    font-size: 12px;
+    color: #ccc;
+  }
+}
+
+@media screen and (max-height: 687px) {
+  div.listContainer {
+    width: 150%;
+    -webkit-transform: translateY(-50%) scale(0.6);
+            transform: translateY(-50%) scale(0.6);
+  }
+}
+
+@media screen and (max-height: 481px) {
+  div.listContainer {
+    -webkit-transform: translateY(-50%) scale(0.5);
+            transform: translateY(-50%) scale(0.5);
+  }
+}
+
+@media screen and (max-height: 390px) {
+  div.listContainer {
+    -webkit-transform: translateY(-50%) scale(0.4);
+            transform: translateY(-50%) scale(0.4);
+  }
+}
+/*# sourceMappingURL=style.css.map */
